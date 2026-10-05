@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Đăng ký người dùng — Bootstrap Forms</title>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="style.css">
+<script src="script.js" defer></script>
+</head>
+<body>
+<main class="container py-4 py-md-5">
+<div class="registration-card card shadow-sm mx-auto"><div class="card-body p-4 p-md-5">
+<header class="text-center mb-4"><p class="small text-primary fw-bold text-uppercase mb-2">Bắt đầu hành trình của bạn</p><h1 class="h2 fw-bold">Đăng ký người dùng</h1><p class="text-muted mb-0">Điền thông tin bên dưới để hoàn thành bài thực hành đăng ký.</p></header>
+<form id="registration-form">
+<div class="mb-3"><label for="fullname" class="form-label">Họ và tên <span class="text-danger" aria-hidden="true">*</span></label><input type="text" class="form-control" id="fullname" name="fullname" placeholder="Nhập họ và tên" autocomplete="name" required></div>
+<div class="mb-3"><label for="email" class="form-label">Email <span class="text-danger" aria-hidden="true">*</span></label><input type="email" class="form-control" id="email" name="email" placeholder="ban@example.com" autocomplete="email" required></div>
+<div class="row g-3 mb-3">
+<div class="col-md-6"><label for="password" class="form-label">Mật khẩu <span class="text-danger" aria-hidden="true">*</span></label><input type="password" class="form-control" id="password" name="password" minlength="8" autocomplete="new-password" aria-describedby="password-help" required><div id="password-help" class="form-text">Ít nhất 8 ký tự.</div></div>
+<div class="col-md-6"><label for="confirm-password" class="form-label">Xác nhận mật khẩu <span class="text-danger" aria-hidden="true">*</span></label><input type="password" class="form-control" id="confirm-password" name="confirm_password" minlength="8" autocomplete="new-password" aria-describedby="confirm-help" required><div id="confirm-help" class="form-text">Nhập lại mật khẩu vừa tạo.</div></div>
+</div>
+<fieldset class="mb-3"><legend class="form-label">Giới tính <span class="text-danger" aria-hidden="true">*</span></legend><div class="d-flex flex-wrap gap-3"><div class="form-check"><input class="form-check-input" type="radio" name="gender" id="male" value="male" required><label class="form-check-label" for="male">Nam</label></div><div class="form-check"><input class="form-check-input" type="radio" name="gender" id="female" value="female"><label class="form-check-label" for="female">Nữ</label></div><div class="form-check"><input class="form-check-input" type="radio" name="gender" id="other" value="other"><label class="form-check-label" for="other">Khác</label></div></div></fieldset>
+<fieldset class="mb-3"><legend class="form-label">Sở thích</legend><div class="row g-2"><div class="col-6"><div class="form-check"><input class="form-check-input" type="checkbox" name="hobby" id="coding" value="coding"><label class="form-check-label" for="coding">Lập trình</label></div></div><div class="col-6"><div class="form-check"><input class="form-check-input" type="checkbox" name="hobby" id="reading" value="reading"><label class="form-check-label" for="reading">Đọc sách</label></div></div><div class="col-6"><div class="form-check"><input class="form-check-input" type="checkbox" name="hobby" id="sports" value="sports"><label class="form-check-label" for="sports">Thể thao</label></div></div><div class="col-6"><div class="form-check"><input class="form-check-input" type="checkbox" name="hobby" id="travel" value="travel"><label class="form-check-label" for="travel">Du lịch</label></div></div></div></fieldset>
+<div class="mb-4"><label for="country" class="form-label">Quốc gia <span class="text-danger" aria-hidden="true">*</span></label><select class="form-select" id="country" name="country" required><option value="" selected disabled>Chọn quốc gia</option><option value="VN">Việt Nam</option><option value="US">Hoa Kỳ</option><option value="JP">Nhật Bản</option><option value="KR">Hàn Quốc</option><option value="other">Khác</option></select></div>
+<button type="submit" class="btn btn-primary btn-lg w-100">Đăng ký</button>
+<p class="form-text text-center mt-3 mb-0">Các trường có dấu * là bắt buộc. Đây là form minh họa, không tạo tài khoản trên máy chủ.</p>
+<div id="success-message" class="alert alert-success mt-3 mb-0" role="status" hidden>Thông tin hợp lệ! Bạn đã hoàn thành form đăng ký minh họa. Dữ liệu chưa được gửi hoặc lưu.</div>
+</form>
+</div></div>
+<p class="text-center text-muted small mt-4 mb-0">Bài thực hành Bootstrap Forms · Buttons · Text Elements</p>
+</main>
+</body>
+</html>
